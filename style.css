@@ -619,10 +619,9 @@ footer {
     }
     .map-container{
         width: 100%;
-        position: relative;
-        pointer-events: none;
     }
     iframe{
         width: 100%;
     }
+
 }
