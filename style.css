@@ -1,0 +1,628 @@
+        /* ===========================
+        GLOBAL STYLES / RESET
+        =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding/border don't affect total size */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url(coffee-hero-bg.jpg); /* Sets hero background image */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Keeps background fixed when scrolling */
+}
+
+        /* ===========================
+            SIMPLYCAFE LOGO SECTION
+        =========================== */
+.simplycafe img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.simplycafe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: -380px;
+    pointer-events: none;
+}
+        /* ===========================
+            HEADER / NAVBAR SECTION
+        =========================== */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    top: 0;
+    left: 0;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.navbar .logo span {
+    color: #C06B3E; /* Highlight color for logo part */
+}
+
+.navbar .menu-link {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-link {
+    margin-top: 10px;
+}
+.navbar .menu-links {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-links {
+    margin-top: 10px;
+}
+
+.navbar li {
+    color: transparent;
+
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #C06B3E; /* Hover color for navbar links */
+}
+
+
+    /*  ===========================
+                HERO SECTION
+        =========================== */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-section .content {
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-section .content h1 {
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.hero-section .content p {
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+p {
+    font-size: 30px;
+}
+
+.hero-section .content button {
+    background: #fff;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 50px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hero-section .content button:hover {
+    color: #fff;
+    background: #C06B3E;
+}
+
+.content a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+        /* ===========================
+        PRODUCTS SECTION
+        =========================== */
+.simplycafe2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: -150px;
+    pointer-events: none;
+}
+
+.simplycafe2 img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.products {
+    padding: 100px 50px 50px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    color: #C06B3E;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+        /* PRODUCT CARD STYLING */
+.card {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease ;
+    cursor: pointer;
+}
+
+.card img {
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.8);
+}
+
+        /* CART ICON */
+#cart-icon {
+    color: #fff;
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: -10px;
+}
+
+#cart-icon:hover {
+    color: #C06B3E;
+}
+
+#cart-icon .cart-item-count {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    background: #C06B3E;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+        /* ADD TO CART BUTTON */
+.add-cart {
+    color: #fff;
+    padding: 5px;
+    background: #C06B3E;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.price {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+        /* ===========================
+        CART SIDEBAR STYLING
+        =========================== */
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100%;
+    background: #ffffffc4;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 65px 20px 40px;
+    z-index: 100;
+    overflow: auto;
+    overflow-y: auto;
+    transition: 0.5s;
+}
+
+.cart.active {
+    right: 0; 
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.cart-content {
+    text-align: start;
+    padding: 10px;
+}
+
+.cart-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cart-box img {
+    width: 120px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-detail {
+    display: grid;
+    gap: 8px;
+    margin: 0 auto;
+    flex: 1;
+}
+.card .cart-product-title {
+  color: #ffffff; 
+}
+.cart-product-title {
+    color: #000000;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+        /* CART QUANTITY CONTROL */
+.cart-quantity {
+    display: flex;
+    width: 100px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+}
+
+.cart-quantity button {
+    background: transparent;
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-quantity #decrement {
+    color: #000000;
+}
+
+.cart-quantity .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    cursor: default;
+}
+
+.cart-remove {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.total-price {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.btn-buy {
+    display: block;
+    padding: 10px 30px;
+    background: #C06B3E;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+
+#cart-close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+
+    /* ===========================
+            ABOUT US SECTION
+        =========================== */
+.simplycafe3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: -450px;
+    pointer-events: none;
+}
+
+.simplycafe3 img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.About {
+    margin-top: 250px;
+    padding: 120px 100px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+
+.About h2 {
+    font-size: 2em;
+    color: #C06B3E;
+}
+
+.About p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.About h1 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+        /* TESTIMONIAL BOXES */
+.footers {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* space between cards */
+    background-color: transparent;
+    padding: 40px 50px;
+}
+
+.column {
+    display: grid;
+    width: 500px;
+    background-color: transparent;
+    box-shadow: 8px 8px 16px #df9c78, -8px -8px 16px #C06B3E;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    justify-items: center;
+}
+
+.avatar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatars {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+    margin-top: 10px;
+}
+
+.comment {
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+
+        /* ===========================
+        CONTACT US SECTION
+        =========================== */
+.map-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+}
+
+iframe {
+      border-radius: 10px;
+}
+
+.map-content {
+      text-align: center;
+}
+
+.map-content h2 {
+      color: #fff;
+      margin-bottom: 20px;
+}
+
+.contact-details p {
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 5px 0;
+      letter-spacing: 0.5px;
+}
+
+.contact-details strong {
+      color: #C06B3E;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+        /* ===========================
+        RESPONSIVE DESIGN
+        =========================== */
+@media screen and (max-width: 600px) {
+    
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .menu-link {
+        display: flex;            
+        flex-direction: row;      
+        gap: 15px;                
+        font-size: 14px;          
+    }
+    .menu-links {
+        display: flex;            
+        flex-direction: row;      
+        gap: 15px;                
+        font-size: 14px;          
+    }
+    .hero-section {
+        margin-top: 100px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .products {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cart {
+        width: 100%;
+    }
+
+    .cart-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .About{
+        height: auto;
+        width: auto;
+    }
+
+    .About h2 {
+        font-size: 2.5rem; 
+    }
+    .About p {
+        font-size: 1em; 
+    }
+
+    .About h1 {
+        font-size: 1.2em; 
+    }
+
+    .column {
+        width: 100%; 
+        margin: 10px 0;
+        height: auto; 
+    }
+
+    .comment {
+        font-size: 16px;
+        margin: 10px 5px;
+    }
+
+    .footers {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+    }
+
+    .map-content{
+        margin-top: 250px;
+    }
+    .map-container{
+        width: 100%;
+        position: relative;
+        pointer-events: none;
+    }
+    iframe{
+        width: 100%;
+    }
+}
