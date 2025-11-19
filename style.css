@@ -13,6 +13,7 @@ body {
     background-image: url(coffee-hero-bg.jpg); /* Sets hero background image */
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed; /* Keeps background fixed when scrolling */
 }
 
@@ -47,8 +48,8 @@ header {
 header .navbar {
     display: flex;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 50px;
     justify-content: space-between;
 }
 
@@ -64,17 +65,10 @@ header .navbar {
 .navbar .menu-link {
     display: flex;
     gap: 40px;
+    align-items: center;
 }
 
 .menu-link {
-    margin-top: 10px;
-}
-.navbar .menu-links {
-    display: flex;
-    gap: 40px;
-}
-
-.menu-links {
     margin-top: 10px;
 }
 
@@ -535,25 +529,18 @@ footer {
         /* ===========================
         RESPONSIVE DESIGN
         =========================== */
-@media screen and (max-width: 600px) {
-    
-    .navbar {
+@media screen and (max-width: 700px) {
+    header .navbar {
         flex-direction: column;
         text-align: center;
         gap: 5px;
     }
-    .menu-link {
-        display: flex;            
+    .navbar .menu-link {       
         flex-direction: row;      
-        gap: 15px;                
+        gap: 30px;                
         font-size: 14px;          
     }
-    .menu-links {
-        display: flex;            
-        flex-direction: row;      
-        gap: 15px;                
-        font-size: 14px;          
-    }
+
     .hero-section {
         margin-top: 100px;
         height: 100vh;
@@ -623,5 +610,4 @@ footer {
     iframe{
         width: 100%;
     }
-
 }
