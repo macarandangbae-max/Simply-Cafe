@@ -542,11 +542,14 @@ footer {
     }
 
     .hero-section {
-        margin-top: 100px;
+        margin-top: 110px;
         height: 100vh;
         display: flex;
         align-items: center;
         padding: 0 20px;
+    }
+    .hero-section .content h1 {
+        font-size: 2.5em;
     }
     .products {
         flex-direction: row;
@@ -611,3 +614,4 @@ footer {
         width: 100%;
     }
 }
+
